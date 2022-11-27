@@ -3,18 +3,22 @@ pipeline{
 	stages {
 		stage("build"){
 			steps{
-				echo "building the application..."
+				bat 'mvn -B compile'
 			}
 		}
 		stage("test"){
 			steps{
-				echo "testing the application..."
+				bat 'mvn -B clean install'
 			}
 		}
-		stage("deploy"){
+		stage("Archive"){
 			steps{
-				echo "deploying the application..."
+				archiveArtifacts "target/*.jar'
 			}
+		}
+	}
+	post{
+		always{
 		}
 	}
 }

@@ -6,17 +6,12 @@ pipeline{
 	stages {
 		stage("build"){
 			steps{
-				sh 'mvn -B compile'
+				bat "mvn compile"
 			}
 		}
 		stage("test"){
 			steps{
-				sh 'mvn -B clean install'
-			}
-		}
-		stage("Archive"){
-			steps{
-				archiveArtifacts 'target/*.jar'
+				bat "mvn test"
 			}
 		}
 	}

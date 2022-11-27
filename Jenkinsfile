@@ -1,14 +1,17 @@
 pipeline{
 	agent any
+	tools{
+		maven 'Maven'
+	}
 	stages {
 		stage("build"){
 			steps{
-				bat 'mvn -B compile'
+				sh 'mvn -B compile'
 			}
 		}
 		stage("test"){
 			steps{
-				bat 'mvn -B clean install'
+				sh 'mvn -B clean install'
 			}
 		}
 		stage("Archive"){

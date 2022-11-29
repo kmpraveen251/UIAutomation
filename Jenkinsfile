@@ -15,17 +15,17 @@ pipeline{
 				bat "mvn -B test"
 			}
 		}
+		stage ('email')
+		    {
+			emailext (
+			subject: "some subject",
+			body: target '**/extent/*.html'
+			to: "kmpraveen25@gmail.com"
+			)  
+
+    		}
+
 	}
-	post {
-        	always {
-            		target '**/extent/*.html'
-			}
-		 passed {
-			mail to: kmpraveen25@gmail.com
- 
-		 }
-		
-	}
-	    
+	 
 
 }

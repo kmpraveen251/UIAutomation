@@ -18,11 +18,12 @@ pipeline{
 	}
 	post {
         	always {
-            		mail to: kmpraveen25@gmail.com, subject: 'The Pipeline passed :'
+            		junit '**/extent/*.html'
+			mail to: kmpraveen25@gmail.com, subject: 'The Pipeline passed :'
+
+			}
+		
 		}
-	}
-        
-	
-    
+	    
 
 }

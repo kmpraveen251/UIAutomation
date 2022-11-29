@@ -19,7 +19,7 @@ pipeline{
 		    {
 			emailext (
 			subject: "some subject",
-			body: 'text'
+			body: 'text',
 			to: "kmpraveen25@gmail.com")
 			 
     		}

@@ -15,16 +15,15 @@ pipeline{
 				bat "mvn -B test"
 			}
 		}
-		stage ('email')
-		    {
-			emailext (
-			subject: "some subject",
-			body: 'text',
-			to: "kmpraveen25@gmail.com")
-			 
-    		}
 
 	}
+	
+	post {
+        passed {
+            mail to: kmpraveen25@gmail.com, subject: 'The Pipeline failed :('
+        }
+    }
+
 	 
 
 }

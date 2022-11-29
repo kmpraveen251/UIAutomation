@@ -20,9 +20,8 @@ pipeline{
 			emailext (
 			subject: "some subject",
 			body: 'text'
-			to: "kmpraveen25@gmail.com"
+			to: "kmpraveen25@gmail.com")
 			 
-
     		}
 
 	}

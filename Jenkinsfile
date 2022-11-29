@@ -18,7 +18,7 @@ pipeline{
 	}
 	post {
         	always {
-            		mail to: team@example.com, subject: 'The Pipeline passed :'
+            		mail to: kmpraveen25@gmail.com, subject: 'The Pipeline passed :'
 		}
 	}
         

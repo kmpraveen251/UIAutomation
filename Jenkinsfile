@@ -21,7 +21,7 @@ pipeline{
             		target '**/extent/*.html'
 			}
 		 passed {
-			mail to: kmpraveen25@gmail.com, subject: "The Pipeline passed :("
+			mail to: kmpraveen25@gmail.com
  
 		 }
 		

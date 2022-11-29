@@ -21,7 +21,7 @@ pipeline{
 			subject: "some subject",
 			body: 'text'
 			to: "kmpraveen25@gmail.com"
-			)  
+			 
 
     		}
 

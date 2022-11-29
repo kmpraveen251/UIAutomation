@@ -3,12 +3,12 @@ pipeline{
 	stages {
 		stage("build"){
 			steps{
-				bat "mvn compile"
+				bat "mvn -B compile"
 			}
 		}
 		stage("test"){
 			steps{
-				bat "mvn test"
+				bat "mvn -B test"
 			}
 		}
 	}
